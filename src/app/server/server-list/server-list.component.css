@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+}
+
+th {
+    font-size: medium;
+}
+
+.server-up {
+    color: greenyellow;
+    font-weight: bolder;
+}
+
+.server-down {
+    color: orange;
+    font-weight: bolder;
+}
+
+button {
+    margin: 5px;
+}

@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm"
+    (ngSubmit)="submit()"
+    fxLayout="column"
+    fxLayoutAlign="space-evenly center">
+    <h2 mat-dialog-title>Login</h2>
+    <div mat-dialog-content>
+        <mat-form-field appearence="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="jondoe@mail.com">
+        </mat-form-field>
+        <mat-form-field appearence="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password" placeholder="*******">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button type="submit" cdkFocusInitial>Submit</button>
+    </div>
+</form>

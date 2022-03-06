@@ -1,0 +1,36 @@
+<form [formGroup]="serverForm" 
+      (ngSubmit)="submit()"
+      fxLayout="column">
+    <h2 mat-dialog-title>Server especification</h2>
+    <div mat-dialog-content fxLayout="column" fxLayoutAlign="space-evenly center">
+        <mat-form-field appearance="fill">
+            <mat-label>Ip Address</mat-label>
+            <input type="text" matInput formControlName="ipAddress" placeholder="Ex. 127.0.0.1">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput formControlName="name" placeholder="Ex. Ubuntu server">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Memory</mat-label>
+            <input type="text" matInput formControlName="memory" placeholder="Ex. 32kb">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Type</mat-label>
+            <input type="text" matInput formControlName="type" placeholder="Ex. Email server">
+        </mat-form-field>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Select an option</mat-label>
+                <mat-select disableRipple formControlName="status">
+                    <mat-option value="DOWN">DOWN</mat-option>
+                    <mat-option value="UP">UP</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button type="submit" mat-dialog-close>Sumbit</button>
+        <button mat-button type="button" mat-dialog-close cdkFocusInitial>Cancel</button>
+    </div>
+</form>

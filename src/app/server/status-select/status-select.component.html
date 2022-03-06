@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Available status</h2>
+<div mat-dialog-content>
+    <p>Please select the server's status</p>
+    <mat-form-field appearance="fill">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected">
+            <ng-container *ngFor="let status of statusList">
+                <mat-option value={{status}}>{{ status }}</mat-option>
+            </ng-container>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
+    <button mat-button mat-dialog-close={{selected}}>Accept</button>
+</div>

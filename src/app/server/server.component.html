@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+      <span>My App</span>
+      <div id="toolbar-actions">
+        <button mat-raised-button (click)="onStatusSelect()">
+            <mat-icon>clear_all</mat-icon>
+            <span>Status select</span>
+        </button>
+        <button mat-raised-button (click)="onNewServer()">
+            <mat-icon>playlist_add</mat-icon>
+            <span>New Server</span>
+        </button>
+        <button mat-raised-button (click)="onPrintReport()">
+            <mat-icon>library_books</mat-icon>
+            <span>Print report</span>
+        </button>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-server-list [deleteableItems]="true" [dataSource]="dataSource"></app-server-list>
